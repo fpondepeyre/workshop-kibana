@@ -28,3 +28,23 @@ services:
 
     Symfony\Bridge\Monolog\Handler\ElasticsearchLogstashHandler:
         autowire: false
+
+    Monolog\Processor\IntrospectionProcessor:
+        tags:
+            - { name: monolog.processor }
+
+    Monolog\Processor\UidProcessor:
+        tags:
+            - { name: monolog.processor }
+
+    Monolog\Processor\MemoryUsageProcessor:
+        tags:
+            - { name: monolog.processor }
+
+    Monolog\Processor\WebProcessor:
+        tags:
+            - { name: monolog.processor }
+
+    Monolog\Processor\MemoryPeakUsageProcessor:
+        tags:
+            - { name: monolog.processor }
