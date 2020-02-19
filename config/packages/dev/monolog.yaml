@@ -20,3 +20,11 @@ monolog:
         es:
             type: service
             id: Symfony\Bridge\Monolog\Handler\ElasticsearchLogstashHandler
+        grumpy_chef:
+            type: stream
+            path: '%kernel.logs_dir%/%kernel.environment%.grumpy_chef.log'
+            level: debug
+            channels: ['grumpy_chef']
+
+    channels:
+        - grumpy_chef
