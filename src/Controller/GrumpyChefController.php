@@ -35,19 +35,19 @@ class GrumpyChefController extends AbstractController
             if ($i % 1 === 0 || $i % 8 === 0) {
                 $grumpyChefLogger->warning('[GrumpyChefController] A {level} message', [
                     'index' => $i,
-                    'level' => 'info',
+                    'level' => 'warning',
                 ]);
             }
             if ($i % 4 === 0 || $i % 6 === 0) {
                 $grumpyChefLogger->error('[GrumpyChefController] A {level} message', [
                     'index' => $i,
-                    'level' => 'info',
+                    'level' => 'error',
                 ]);
             }
             if ($i % 9 === 0) {
                 $grumpyChefLogger->critical('[GrumpyChefController] A {level} message', [
                     'index' => $i,
-                    'level' => 'info',
+                    'level' => 'critical',
                 ]);
             }
         }
